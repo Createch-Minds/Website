@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Loader from "../components/Loader.astro";
 import Header from "../components/Header.astro";
+const showLoader = import.meta.env.PUBLIC_LOADER === "true";
 import Hero from "../components/Hero.astro";
 import Stackbar from "../components/Stackbar.astro";
 import Aanbod from "../components/Aanbod.astro";
@@ -14,7 +15,7 @@ import Footer from "../components/Footer.astro";
   title="Createch Minds — Java-ingenieur uit de Westhoek, te huur per dag"
   description="Thomas Vankerckhoven, freelance software-ingenieur uit de Westhoek. Java, Spring Boot, event driven architecture, Azure, databanken, security en microservices — voor bedrijven in de regio."
 >
-  <Loader />
+  {showLoader && <Loader />}
   <Header />
   <Hero />
   <Stackbar />
