@@ -1,0 +1,10 @@
+{
+  "name": "Createch Minds",
+  "short_name": "Createch Minds",
+  "icons": [
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

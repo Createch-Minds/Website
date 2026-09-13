@@ -1,0 +1,222 @@
+---
+const hcaptchaSiteKey = import.meta.env.PUBLIC_HCAPTCHA_SITE_KEY;
+---
+
+<section id="contact" class="cm-contact">
+  <div>
+    <h2 class="cm-contact-title">Waar loopt het bij u vast?</h2>
+    <p class="cm-contact-lead">
+      Een paar lijnen over wat er speelt volstaat. Ik antwoord zelf, meestal binnen
+      twee werkdagen.
+    </p>
+    <div class="cm-contact-meta">
+      <a href="mailto:thomas.vankerckhoven@createch-minds.be">thomas.vankerckhoven@createch-minds.be</a>
+      <a
+        class="cm-linkedin"
+        href="https://be.linkedin.com/in/thomas-vankerckhoven-58120219a"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+        LinkedIn
+      </a>
+      <span>Roeselarestraat 67A, 8600 Diksmuide</span>
+    </div>
+  </div>
+  <div class="cm-contact-form-wrap">
+    <form id="cm-contact-form" class="cm-contact-form" novalidate>
+      <div class="field">
+        <label for="cm-naam">Naam</label>
+        <input class="input" id="cm-naam" name="naam" required placeholder="Voornaam en naam" />
+      </div>
+      <div class="field">
+        <label for="cm-bedrijf">Bedrijf</label>
+        <input class="input" id="cm-bedrijf" name="bedrijf" placeholder="Uw bedrijf" />
+      </div>
+      <div class="field cm-span-all">
+        <label for="cm-mail">E-mail</label>
+        <input class="input" id="cm-mail" name="email" type="email" required placeholder="naam@bedrijf.be" />
+      </div>
+      <div class="field cm-span-all">
+        <label for="cm-vraag">Wat scheelt er?</label>
+        <textarea
+          class="input"
+          id="cm-vraag"
+          name="vraag"
+          rows="4"
+          placeholder="Kort volstaat: project, technologie, wanneer."></textarea>
+      </div>
+      <div class="hp-field" aria-hidden="true">
+        <label for="cm-website">Website</label>
+        <input id="cm-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      {
+        hcaptchaSiteKey && (
+          <div class="cm-span-all h-captcha" data-sitekey={hcaptchaSiteKey} />
+        )
+      }
+      <p id="cm-form-error" class="cm-form-error" role="alert" hidden></p>
+      <button class="btn btn-primary cm-span-all" type="submit">Verstuur</button>
+    </form>
+    <div id="cm-form-success" class="cm-form-success" hidden>
+      <div class="cm-form-success-title">Bedankt, uw bericht is onderweg.</div>
+      <div>Ik laat binnen twee werkdagen van me horen.</div>
+    </div>
+  </div>
+</section>
+
+{hcaptchaSiteKey && <script src="https://hcaptcha.com/1/api.js" async defer is:inline />}
+
+<style>
+  .cm-contact {
+    border-top: 2px solid var(--color-text);
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding: clamp(36px, 6vw, 64px) clamp(20px, 5vw, 56px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(28px, 5vw, 56px);
+  }
+  .cm-contact-title {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.04;
+    margin: 0 0 16px;
+  }
+  .cm-contact-lead {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-neutral-800);
+    margin: 0 0 20px;
+    max-width: 48ch;
+  }
+  .cm-contact-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-top: 2px solid var(--color-text);
+    padding-top: 14px;
+    font-size: 15px;
+  }
+  .cm-contact-meta span {
+    color: var(--color-neutral-700);
+  }
+  .cm-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+  }
+  .cm-linkedin svg {
+    width: 16px;
+    height: 16px;
+    flex: none;
+  }
+
+  .cm-contact-form[hidden] {
+    display: none;
+  }
+  .cm-contact-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+  }
+  .cm-span-all {
+    grid-column: 1 / -1;
+  }
+  .cm-contact-form button[type="submit"] {
+    justify-content: flex-start;
+    white-space: nowrap;
+  }
+  .cm-form-error {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-accent-700);
+  }
+
+  .cm-form-success[hidden] {
+    display: none;
+  }
+  .cm-form-success {
+    background: var(--color-text);
+    color: #fff;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .cm-form-success-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 20px;
+  }
+</style>
+
+<script>
+  const form = document.getElementById("cm-contact-form") as HTMLFormElement | null;
+  const errorEl = document.getElementById("cm-form-error");
+  const successEl = document.getElementById("cm-form-success");
+  const submitBtn = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+  function showError(message: string) {
+    if (!errorEl) return;
+    errorEl.textContent = message;
+    errorEl.hidden = false;
+  }
+
+  function hideError() {
+    if (!errorEl) return;
+    errorEl.hidden = true;
+    errorEl.textContent = "";
+  }
+
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    hideError();
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Versturen…";
+    }
+
+    const formData = new FormData(form);
+    const payload = {
+      naam: String(formData.get("naam") ?? ""),
+      bedrijf: String(formData.get("bedrijf") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      vraag: String(formData.get("vraag") ?? ""),
+      website: String(formData.get("website") ?? ""),
+      captchaToken: String(formData.get("h-captcha-response") ?? ""),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error ?? "request-failed");
+      }
+
+      form.hidden = true;
+      if (successEl) successEl.hidden = false;
+    } catch {
+      showError(
+        "Versturen lukte niet — mail me gerust direct op thomas.vankerckhoven@createch-minds.be."
+      );
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Verstuur";
+      }
+      (window as any).hcaptcha?.reset();
+    }
+  });
+</script>

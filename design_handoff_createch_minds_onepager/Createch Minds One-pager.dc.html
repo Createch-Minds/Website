@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/modernist-c6742455-49ef-45d2-a714-3d47b8b555e5/styles.css">
+<script src="_ds/modernist-c6742455-49ef-45d2-a714-3d47b8b555e5/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap">
+<style>
+  body { margin: 0; background: #dedbdb; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-700); }
+  .cm-page a { text-decoration: none; }
+  .cm-page a:hover { text-decoration: underline; }
+</style>
+</helmet>
+
+<section style="display:flex; flex-direction:column; gap:24px; padding:48px; font-family:var(--font-body)">
+  <div style="display:flex; align-items:baseline; gap:16px">
+    <span style="font-family:var(--font-heading); font-weight:800; font-size:13px; letter-spacing:0.08em; text-transform:uppercase">Twee richtingen</span>
+    <span style="font-size:13px; color:var(--color-neutral-700)">Verwijs in chat naar <a href="#1a">1a</a> of <a href="#1b">1b</a></span>
+  </div>
+
+  <div style="display:flex; gap:56px; align-items:flex-start; flex-wrap:wrap">
+
+    <!-- ============ 1A — HET RASTER ============ -->
+    <div id="1a" style="display:flex; flex-direction:column; gap:12px; width:820px">
+      <div style="display:flex; align-items:baseline; gap:12px">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:12px; letter-spacing:0.1em; background:var(--color-accent); color:#fff; padding:4px 8px">1A</span>
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:15px">Het raster — dossier, cijfers, rustig</span>
+      </div>
+
+      <div class="cm-page" style="background:var(--color-bg); color:var(--color-text); border:2px solid var(--color-text)">
+
+        <header style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 40px; border-bottom:2px solid var(--color-text)">
+          <div style="display:flex; align-items:center; gap:14px">
+            <img src="assets/logo.svg" alt="Createch Minds" style="width:46px; height:auto">
+            <div style="display:flex; flex-direction:column; line-height:1.15">
+              <span style="font-family:var(--font-heading); font-weight:800; font-size:15px; letter-spacing:-0.01em">Createch Minds</span>
+              <span style="font-size:12px; color:var(--color-neutral-700)">Diksmuide · Westhoek</span>
+            </div>
+          </div>
+          <nav style="display:flex; align-items:center; gap:28px">
+            <a href="#1a-aanbod" style="font-size:13px; color:var(--color-text)">Aanbod</a>
+            <a href="#1a-klanten" style="font-size:13px; color:var(--color-text)">Klanten</a>
+            <a href="#1a-ai" style="font-size:13px; color:var(--color-text)">AI</a>
+            <a class="btn btn-primary" href="#1a-contact" style="text-decoration:none">Contact opnemen</a>
+          </nav>
+        </header>
+
+        <div style="display:grid; grid-template-columns:1fr 320px">
+          <div style="padding:56px 40px 48px; border-right:2px solid var(--color-text)">
+            <div style="font-family:var(--font-heading); font-weight:800; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-accent-700); margin-bottom:20px">Freelance software-ingenieur</div>
+            <h1 style="font-size:52px; line-height:1.02; margin:0 0 24px; max-width:14ch">Java-expertise, vlak bij huis.</h1>
+            <p style="font-size:17px; line-height:1.55; max-width:46ch; margin:0 0 8px">Ik schrijf code en neem architecturale beslissingen voor bedrijven die hun software serieus nemen. Van Domain Driven Design en microservices tot het optimaliseren en automatiseren van processen.</p>
+          </div>
+          <div style="display:flex; flex-direction:column">
+            <div style="padding:24px 28px; border-bottom:2px solid var(--color-text)">
+              <div style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700); margin-bottom:8px">Wie</div>
+              <div style="font-family:var(--font-heading); font-weight:800; font-size:18px">Thomas Vankerckhoven</div>
+            </div>
+            <div style="padding:24px 28px; border-bottom:2px solid var(--color-text)">
+              <div style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700); margin-bottom:10px">Stack</div>
+              <div style="display:flex; flex-wrap:wrap; gap:6px">
+                <span class="tag tag-outline">Java</span>
+                <span class="tag tag-outline">Spring Boot</span>
+                <span class="tag tag-outline">Kafka</span>
+                <span class="tag tag-outline">Azure</span>
+                <span class="tag tag-outline">OAuth</span>
+                <span class="tag tag-outline">Databanken</span>
+              </div>
+            </div>
+            <div style="padding:24px 28px">
+              <div style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700); margin-bottom:8px">Werkte voor</div>
+              <div style="font-size:14px; line-height:1.6">TomTom · Isabel · Liantis</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="1a-aanbod" style="border-top:2px solid var(--color-text); padding:40px 40px 8px">
+          <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:28px">
+            <span style="font-family:var(--font-heading); font-weight:800; font-size:13px; color:var(--color-accent)">01</span>
+            <h2 style="font-size:26px; margin:0">Wat ik aanbied</h2>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr))">
+            <div style="padding:0 32px 28px 0; border-right:2px solid var(--color-divider); border-bottom:2px solid var(--color-divider)">
+              <h3 style="font-size:17px; margin:0 0 6px">Code die meegaat</h3>
+              <p style="font-size:14px; line-height:1.6; color:var(--color-neutral-800); margin:0">Java en Spring Boot, getest en leesbaar. Geen constructie die enkel ik nog begrijp.</p>
+            </div>
+            <div style="padding:0 0 28px 32px; border-bottom:2px solid var(--color-divider)">
+              <h3 style="font-size:17px; margin:0 0 6px">Architecturale beslissingen</h3>
+              <p style="font-size:14px; line-height:1.6; color:var(--color-neutral-800); margin:0">Domain Driven Design en microservices, ingezet waar ze renderen — niet omdat het moet.</p>
+            </div>
+            <div style="padding:28px 32px 28px 0; border-right:2px solid var(--color-divider)">
+              <h3 style="font-size:17px; margin:0 0 6px">Processen automatiseren</h3>
+              <p style="font-size:14px; line-height:1.6; color:var(--color-neutral-800); margin:0">Handwerk dat elke maand terugkomt, één keer goed oplossen. Koppelingen, batches, rapportering.</p>
+            </div>
+            <div style="padding:28px 0 28px 32px">
+              <h3 style="font-size:17px; margin:0 0 6px">Cloud en integratie</h3>
+              <p style="font-size:14px; line-height:1.6; color:var(--color-neutral-800); margin:0">Azure, databanken, Kafka en OAuth. Uw systemen laten praten, veilig en traceerbaar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="1a-klanten" style="border-top:2px solid var(--color-text); padding:40px 40px 44px">
+          <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:8px">
+            <span style="font-family:var(--font-heading); font-weight:800; font-size:13px; color:var(--color-accent)">02</span>
+            <h2 style="font-size:26px; margin:0">Klanten</h2>
+          </div>
+          <table class="table" style="width:100%">
+            <thead>
+              <tr>
+                <th style="width:30%">Klant</th>
+                <th>Opdracht</th>
+                <th style="width:26%">Rol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img class="cm-logo grayscale" src="assets/tomtom.svg" alt="TomTom" style="height:20px; width:auto"></td>
+                <td style="font-size:14px">Meewerken aan Overture — real-time kaart op basis van Kafka</td>
+                <td style="font-size:14px; color:var(--color-neutral-700)">Software-ingenieur</td>
+              </tr>
+              <tr>
+                <td><img class="cm-logo grayscale" src="assets/isabel.svg" alt="Isabel" style="height:22px; width:auto"></td>
+                <td style="font-size:14px">Uitrol van Isakey</td>
+                <td style="font-size:14px; color:var(--color-neutral-700)">Freelance</td>
+              </tr>
+              <tr>
+                <td><img class="cm-logo grayscale" src="assets/liantis.png" alt="Liantis" style="height:34px; width:34px; object-fit:contain"></td>
+                <td style="font-size:14px">Facturatietools</td>
+                <td style="font-size:14px; color:var(--color-neutral-700)">Freelance</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="1a-ai" style="border-top:2px solid var(--color-text); display:grid; grid-template-columns:1fr 1fr">
+          <div style="padding:40px; border-right:2px solid var(--color-text)">
+            <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:18px">
+              <span style="font-family:var(--font-heading); font-weight:800; font-size:13px; color:var(--color-accent)">03</span>
+              <h2 style="font-size:26px; margin:0">Over AI</h2>
+            </div>
+            <p style="font-size:15px; line-height:1.6; margin:0 0 12px">Ik gebruik AI-tools dagelijks. In de wereld van vandaag zijn ze onmisbaar, en ze maken mij sneller.</p>
+            <p style="font-size:15px; line-height:1.6; margin:0">Maar AI kan niet zomaar ingezet worden. Er is altijd een supervisor nodig: security en onderhoudbare code blijven centraal staan. Wat ik oplever, heb ik zelf doorgrond.</p>
+          </div>
+          <div style="padding:40px; background:var(--color-accent); color:#fff; display:flex; align-items:flex-end">
+            <div style="font-family:var(--font-heading); font-weight:800; font-size:30px; line-height:1.1">AI schrijft mee.<br>Ik blijf verantwoordelijk.</div>
+          </div>
+        </div>
+
+        <div id="1a-contact" style="border-top:2px solid var(--color-text); display:grid; grid-template-columns:300px 1fr">
+          <div style="padding:40px; border-right:2px solid var(--color-text)">
+            <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:18px">
+              <span style="font-family:var(--font-heading); font-weight:800; font-size:13px; color:var(--color-accent)">04</span>
+              <h2 style="font-size:26px; margin:0">Contact</h2>
+            </div>
+            <p style="font-size:14px; line-height:1.6; color:var(--color-neutral-800); margin:0 0 16px">Heeft uw bedrijf een IT-specialist nodig om de flow op punt te stellen? Laat weten waar het knelt — u krijgt binnen twee werkdagen antwoord.</p>
+            <a href="mailto:thomas.vankerckhoven@createch-minds.be" style="font-size:14px">thomas.vankerckhoven@createch-minds.be</a>
+          </div>
+          <div style="padding:40px">
+            <sc-if value="{{ sentA }}" hint-placeholder-val="{{ false }}">
+              <div style="border:2px solid var(--color-text); padding:24px; display:flex; flex-direction:column; gap:6px">
+                <div style="font-family:var(--font-heading); font-weight:800; font-size:18px">Bedankt — uw bericht staat klaar.</div>
+                <div style="font-size:14px; color:var(--color-neutral-800)">Ik neem binnen twee werkdagen contact op.</div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ formA }}" hint-placeholder-val="{{ true }}">
+              <form onSubmit="{{ submitA }}" style="display:grid; grid-template-columns:1fr 1fr; gap:16px">
+                <div class="field">
+                  <label for="a-naam">Naam</label>
+                  <input class="input" id="a-naam" name="naam" required="required" placeholder="Voornaam en naam">
+                </div>
+                <div class="field">
+                  <label for="a-bedrijf">Bedrijf</label>
+                  <input class="input" id="a-bedrijf" name="bedrijf" placeholder="Uw bedrijf">
+                </div>
+                <div class="field" style="grid-column:1 / -1">
+                  <label for="a-mail">E-mail</label>
+                  <input class="input" id="a-mail" name="email" type="email" required="required" placeholder="naam@bedrijf.be">
+                </div>
+                <div class="field" style="grid-column:1 / -1">
+                  <label for="a-vraag">Waar kan ik bijspringen?</label>
+                  <textarea class="input" id="a-vraag" name="vraag" rows="4" style="resize:vertical" placeholder="Kort: project, technologie, timing."></textarea>
+                </div>
+                <div style="grid-column:1 / -1; display:flex; align-items:center; gap:16px">
+                  <button class="btn btn-primary" type="submit" style="flex:none; white-space:nowrap">Verstuur bericht</button>
+                  <span style="font-size:12px; color:var(--color-neutral-700)">Of bel: op afspraak, ook ter plaatse in de Westhoek.</span>
+                </div>
+              </form>
+            </sc-if>
+          </div>
+        </div>
+
+        <footer style="border-top:2px solid var(--color-text); padding:24px 40px; display:flex; flex-wrap:wrap; gap:8px 32px; font-size:12px; color:var(--color-neutral-700)">
+          <span>Createch Minds CommV</span>
+          <span>BTW BE1002.531.325</span>
+          <span>Roeselarestraat 67A, 8600 Diksmuide</span>
+          <a href="mailto:thomas.vankerckhoven@createch-minds.be">thomas.vankerckhoven@createch-minds.be</a>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ============ 1B — DE AFFICHE ============ -->
+    <div id="1b" style="display:flex; flex-direction:column; gap:12px; width:820px">
+      <div style="display:flex; align-items:baseline; gap:12px">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:12px; letter-spacing:0.1em; background:var(--color-text); color:#fff; padding:4px 8px">1B</span>
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:15px">De affiche — groot statement, sober kader</span>
+      </div>
+
+      <div class="cm-page" style="background:#fff; color:var(--color-text)">
+
+        <header style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; padding:28px 48px 20px">
+          <img src="assets/logo.svg" alt="Createch Minds" style="width:64px; height:auto">
+          <div style="display:flex; gap:32px; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; font-family:var(--font-heading); font-weight:600">
+            <a href="#1b-aanbod" style="color:var(--color-text)">Aanbod</a>
+            <a href="#1b-klanten" style="color:var(--color-text)">Klanten</a>
+            <a href="#1b-contact" style="color:var(--color-text)">Contact</a>
+          </div>
+        </header>
+
+        <div style="padding:0 48px 40px">
+          <hr class="hr" style="margin:0 0 32px; background:var(--color-text)">
+          <h1 style="font-size:78px; line-height:0.95; margin:0 0 32px; max-width:20ch; letter-spacing:-0.03em">Uw software<br>verdient een<br>ingenieur, geen<br>gokwerk.</h1>
+          <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:start">
+            <p style="font-size:19px; line-height:1.5; margin:0">Na enkele jaren bij TomTom nam ik de sprong naar het zelfstandige. Sindsdien werk ik voor klanten als Isabel en Liantis — en ben ik ervan overtuigd dat ik die expertise ook aan uw bedrijf kan aanbieden.</p>
+            <div style="display:flex; flex-direction:column; gap:2px; border-top:2px solid var(--color-text); padding-top:12px">
+              <div style="font-family:var(--font-heading); font-weight:800; font-size:16px">Thomas Vankerckhoven</div>
+              <div style="font-size:14px; color:var(--color-neutral-700)">Freelance software-ingenieur</div>
+              <div style="font-size:14px; color:var(--color-neutral-700)">Createch Minds CommV · Diksmuide</div>
+              <a class="btn btn-primary btn-block" href="#1b-contact" style="margin-top:14px; justify-content:flex-start">Plan een gesprek</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--color-text); color:#fff; padding:18px 48px; display:flex; flex-wrap:wrap; gap:8px 28px; font-family:var(--font-heading); font-weight:600; font-size:14px; letter-spacing:0.06em; text-transform:uppercase">
+          <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Azure</span><span>OAuth</span><span>Domain Driven Design</span><span>Microservices</span>
+        </div>
+
+        <div id="1b-aanbod" style="padding:48px">
+          <h2 style="font-size:15px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 28px">Wat ik aanbied</h2>
+          <div style="display:flex; flex-direction:column">
+            <div style="display:grid; grid-template-columns:80px 1fr 1.1fr; gap:32px; padding:22px 0; border-top:2px solid var(--color-text)">
+              <span style="font-family:var(--font-heading); font-weight:800; font-size:34px; line-height:1; color:var(--color-accent)">01</span>
+              <h3 style="font-size:22px; margin:0">Bijspringen in code</h3>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Een extra paar handen dat de codebase respecteert: getest, leesbaar, overdraagbaar.</p>
+            </div>
+            <div style="display:grid; grid-template-columns:80px 1fr 1.1fr; gap:32px; padding:22px 0; border-top:2px solid var(--color-divider)">
+              <span style="font-family:var(--font-heading); font-weight:800; font-size:34px; line-height:1; color:var(--color-accent)">02</span>
+              <h3 style="font-size:22px; margin:0">Architectuur uittekenen</h3>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Domain Driven Design en microservices, met keuzes die u over drie jaar nog kan verdedigen.</p>
+            </div>
+            <div style="display:grid; grid-template-columns:80px 1fr 1.1fr; gap:32px; padding:22px 0; border-top:2px solid var(--color-divider)">
+              <span style="font-family:var(--font-heading); font-weight:800; font-size:34px; line-height:1; color:var(--color-accent)">03</span>
+              <h3 style="font-size:22px; margin:0">Processen optimaliseren</h3>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Terugkerend handwerk automatiseren — koppelingen, facturatie, rapportering.</p>
+            </div>
+            <div style="display:grid; grid-template-columns:80px 1fr 1.1fr; gap:32px; padding:22px 0; border-top:2px solid var(--color-divider); border-bottom:2px solid var(--color-text)">
+              <span style="font-family:var(--font-heading); font-weight:800; font-size:34px; line-height:1; color:var(--color-accent)">04</span>
+              <h3 style="font-size:22px; margin:0">Azure en databanken</h3>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Uw omgeving stabiel, veilig en beheersbaar houden in de cloud.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="1b-klanten" style="padding:0 48px 48px">
+          <h2 style="font-size:15px; letter-spacing:0.1em; text-transform:uppercase; margin:0 0 24px">Klanten</h2>
+          <div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:0">
+            <div style="padding:24px 24px 24px 0; border-top:2px solid var(--color-text); border-right:2px solid var(--color-divider); display:flex; flex-direction:column; gap:14px">
+              <img class="cm-logo grayscale" src="assets/tomtom.svg" alt="TomTom" style="height:24px; width:auto; align-self:flex-start">
+              <p style="font-size:14px; line-height:1.55; margin:0; color:var(--color-neutral-800)">Meewerken aan Overture: een real-time kaart opgebouwd met Kafka.</p>
+            </div>
+            <div style="padding:24px; border-top:2px solid var(--color-text); border-right:2px solid var(--color-divider); display:flex; flex-direction:column; gap:14px">
+              <img class="cm-logo grayscale" src="assets/isabel.svg" alt="Isabel" style="height:26px; width:auto; align-self:flex-start">
+              <p style="font-size:14px; line-height:1.55; margin:0; color:var(--color-neutral-800)">Uitrol van Isakey bij een van de grootste betaalplatformen van het land.</p>
+            </div>
+            <div style="padding:24px 0 24px 24px; border-top:2px solid var(--color-text); display:flex; flex-direction:column; gap:14px">
+              <img class="cm-logo grayscale" src="assets/liantis.png" alt="Liantis" style="height:36px; width:36px; object-fit:contain; align-self:flex-start">
+              <p style="font-size:14px; line-height:1.55; margin:0; color:var(--color-neutral-800)">Facturatietools: nauwkeurig, controleerbaar en onderhoudbaar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="1b-ai" style="background:var(--color-accent); color:#fff; padding:56px 48px">
+          <div style="font-size:13px; letter-spacing:0.1em; text-transform:uppercase; font-family:var(--font-heading); font-weight:600; margin-bottom:24px">Standpunt over AI</div>
+          <div style="font-family:var(--font-heading); font-weight:800; font-size:46px; line-height:1.05; letter-spacing:-0.02em; max-width:26ch; margin-bottom:28px">Ik gebruik AI. Ik laat het nooit alleen beslissen.</div>
+          <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:40px; max-width:760px">
+            <p style="font-size:16px; line-height:1.6; margin:0">AI-tools zijn vandaag onmisbaar en ik zet ze bewust in: ze versnellen het routinewerk en houden de kost voor u lager.</p>
+            <p style="font-size:16px; line-height:1.6; margin:0">Maar er is altijd een supervisor nodig. Security en onderhoudbare code blijven centraal staan — elke lijn die ik oplever, heb ik zelf nagekeken.</p>
+          </div>
+        </div>
+
+        <div id="1b-contact" style="padding:48px; display:grid; grid-template-columns:1fr 1.15fr; gap:56px">
+          <div>
+            <h2 style="font-size:38px; line-height:1.05; margin:0 0 16px">Waar knelt het bij u?</h2>
+            <p style="font-size:16px; line-height:1.6; color:var(--color-neutral-800); margin:0 0 24px">Heeft uw bedrijf een IT-specialist nodig om de flow wat meer op punt te stellen — Azure, databanken, integraties? Stuur een paar lijnen, dan bekijken we samen of ik de juiste man ben.</p>
+            <div style="display:flex; flex-direction:column; gap:4px; border-top:2px solid var(--color-text); padding-top:14px; font-size:14px">
+              <a href="mailto:thomas.vankerckhoven@createch-minds.be">thomas.vankerckhoven@createch-minds.be</a>
+              <span style="color:var(--color-neutral-700)">Roeselarestraat 67A, 8600 Diksmuide</span>
+            </div>
+          </div>
+          <div>
+            <sc-if value="{{ sentB }}" hint-placeholder-val="{{ false }}">
+              <div style="background:var(--color-text); color:#fff; padding:28px; display:flex; flex-direction:column; gap:8px">
+                <div style="font-family:var(--font-heading); font-weight:800; font-size:20px">Bedankt voor uw bericht.</div>
+                <div style="font-size:14px">Ik neem binnen twee werkdagen contact op.</div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ formB }}" hint-placeholder-val="{{ true }}">
+              <form onSubmit="{{ submitB }}" style="display:flex; flex-direction:column; gap:18px">
+                <div class="field">
+                  <label for="b-naam">Naam</label>
+                  <input class="input" id="b-naam" name="naam" required="required" placeholder="Voornaam en naam">
+                </div>
+                <div class="field">
+                  <label for="b-bedrijf">Bedrijf</label>
+                  <input class="input" id="b-bedrijf" name="bedrijf" placeholder="Uw bedrijf">
+                </div>
+                <div class="field">
+                  <label for="b-mail">E-mail</label>
+                  <input class="input" id="b-mail" name="email" type="email" required="required" placeholder="naam@bedrijf.be">
+                </div>
+                <div class="field">
+                  <label for="b-vraag">Uw vraag</label>
+                  <textarea class="input" id="b-vraag" name="vraag" rows="4" style="resize:vertical" placeholder="Kort: project, technologie, timing."></textarea>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit" style="justify-content:flex-start">Verstuur</button>
+              </form>
+            </sc-if>
+          </div>
+        </div>
+
+        <footer style="border-top:2px solid var(--color-text); padding:22px 48px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 32px; font-size:12px; color:var(--color-neutral-700)">
+          <span>Createch Minds CommV · BTW BE1002.531.325</span>
+          <span>Roeselarestraat 67A, 8600 Diksmuide</span>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#ec3013&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#ec3013&quot;,&quot;#058CD4&quot;,&quot;#892D7E&quot;,&quot;#EA0F55&quot;],&quot;section&quot;:&quot;Stijl&quot;},&quot;logosGrayscale&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Stijl&quot;}}">
+class Component extends DCLogic {
+  state = { sentA: false, sentB: false };
+
+  componentDidMount() { this.applyTheme(); }
+  componentDidUpdate() { this.applyTheme(); }
+
+  applyTheme() {
+    const accent = this.props.accent;
+    const root = document.documentElement;
+    if (accent) root.style.setProperty('--color-accent', accent);
+    const gray = this.props.logosGrayscale ?? true;
+    document.querySelectorAll('.cm-logo').forEach(el => {
+      el.style.filter = gray ? 'grayscale(1) contrast(1.08)' : 'none';
+    });
+  }
+
+  send(key, e) {
+    e.preventDefault();
+    const f = e.target;
+    const get = n => (f.elements[n] ? f.elements[n].value : '');
+    const body = ['Naam: ' + get('naam'), 'Bedrijf: ' + get('bedrijf'), 'E-mail: ' + get('email'), '', get('vraag')].join('\n');
+    window.open('mailto:thomas.vankerckhoven@createch-minds.be'
+      + '?subject=' + encodeURIComponent('Aanvraag via createch-minds.be')
+      + '&body=' + encodeURIComponent(body), '_blank');
+    this.setState({ [key]: true });
+  }
+
+  renderVals() {
+    return {
+      sentA: this.state.sentA,
+      formA: !this.state.sentA,
+      sentB: this.state.sentB,
+      formB: !this.state.sentB,
+      submitA: e => this.send('sentA', e),
+      submitB: e => this.send('sentB', e)
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL("/og-image.png", Astro.site);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Createch Minds",
+  image: new URL("/assets/logo.svg", Astro.site).toString(),
+  url: Astro.site?.toString(),
+  email: "thomas.vankerckhoven@createch-minds.be",
+  vatID: "BE1002.531.325",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Roeselarestraat 67A",
+    postalCode: "8600",
+    addressLocality: "Diksmuide",
+    addressCountry: "BE",
+  },
+  areaServed: "Westhoek, België",
+  founder: {
+    "@type": "Person",
+    name: "Thomas Vankerckhoven",
+    jobTitle: "Freelance software-ingenieur",
+    sameAs: ["https://be.linkedin.com/in/thomas-vankerckhoven-58120219a"],
+  },
+};
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Createch Minds" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:locale" content="nl_BE" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} is:inline />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

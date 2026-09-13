@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Privacybeleid — Createch Minds"
+  description="Welke persoonsgegevens Createch Minds verwerkt via het contactformulier, waarom, en welke rechten u heeft."
+>
+  <Header />
+  <section class="cm-legal">
+    <hr class="hr" />
+    <h1>Privacybeleid</h1>
+    <p class="cm-legal-updated">Laatst bijgewerkt: september 2026.</p>
+
+    <h2>Wie is verantwoordelijk?</h2>
+    <p>
+      Createch Minds CommV, BTW BE1002.531.325, Roeselarestraat 67A, 8600 Diksmuide, is
+      verantwoordelijk voor de verwerking van persoonsgegevens via deze website. Contact:
+      <a href="mailto:thomas.vankerckhoven@createch-minds.be">thomas.vankerckhoven@createch-minds.be</a>.
+    </p>
+
+    <h2>Welke gegevens en waarom?</h2>
+    <p>
+      Deze website heeft één contactformulier. Wanneer u dat invult, verwerken we de naam,
+      het (optionele) bedrijf, het e-mailadres en het bericht die u zelf invult — uitsluitend
+      om te reageren op uw aanvraag. Er is verder geen registratie, geen account en geen
+      tracking op deze site.
+    </p>
+
+    <h2>Hoe wordt het verstuurd?</h2>
+    <p>
+      Het formulier stuurt een e-mail via SendGrid (Twilio SendGrid Inc.), dat optreedt als
+      verwerker. Uw gegevens komen terecht in de mailbox van Createch Minds en worden nergens
+      apart in een database bijgehouden. Bij het versturen wordt kort uw IP-adres bekeken om
+      spam te weren; dit IP-adres wordt niet opgeslagen.
+    </p>
+
+    <h2>Hoe lang worden gegevens bewaard?</h2>
+    <p>
+      Zolang nodig om uw aanvraag te behandelen, en nadien zo lang als een normale
+      e-mailcorrespondentie bewaard blijft. Vraagt u de verwijdering ervan, dan wordt de
+      betrokken e-mail gewist.
+    </p>
+
+    <h2>Uw rechten</h2>
+    <p>
+      U heeft steeds recht op inzage, correctie, verwijdering en bezwaar met betrekking tot uw
+      gegevens. Stuur daarvoor een e-mail naar
+      <a href="mailto:thomas.vankerckhoven@createch-minds.be">thomas.vankerckhoven@createch-minds.be</a>.
+      U kan ook een klacht indienen bij de
+      <a href="https://www.gegevensbeschermingsautoriteit.be" target="_blank" rel="noopener noreferrer"
+        >Gegevensbeschermingsautoriteit</a
+      >.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      Deze website gebruikt geen cookies, geen analytics en geen tracking van bezoekers.
+    </p>
+
+    <a class="btn btn-primary cm-legal-back" href="/">Terug naar de homepage</a>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  .cm-legal {
+    max-width: 68ch;
+    margin-inline: auto;
+    padding: clamp(36px, 6vw, 64px) clamp(20px, 5vw, 56px);
+  }
+  .cm-legal h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.04;
+    margin: clamp(24px, 4vw, 40px) 0 8px;
+  }
+  .cm-legal-updated {
+    font-size: 13px;
+    color: var(--color-neutral-700);
+    margin: 0 0 32px;
+  }
+  .cm-legal h2 {
+    font-size: 18px;
+    margin: 32px 0 10px;
+  }
+  .cm-legal p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-neutral-800);
+    margin: 0;
+  }
+  .cm-legal-back {
+    margin-top: 40px;
+  }
+</style>

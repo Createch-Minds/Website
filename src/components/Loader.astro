@@ -1,0 +1,70 @@
+---
+---
+
+<div id="cm-loader" class="cm-loader" aria-hidden="true">
+  <img src="/assets/logo.svg" alt="" width="130" height="130" />
+  <i></i>
+</div>
+
+<style>
+  .cm-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    pointer-events: none;
+    animation: cm-veil 1.4s ease both;
+  }
+  .cm-loader img {
+    width: 130px;
+    height: auto;
+    animation: cm-mark 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .cm-loader i {
+    display: block;
+    width: 170px;
+    height: 3px;
+    background: var(--color-accent);
+    transform-origin: left center;
+    animation: cm-wipe 1.2s cubic-bezier(0.65, 0, 0.35, 1) both;
+  }
+
+  @keyframes cm-veil {
+    0%, 55% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes cm-mark {
+    0% { opacity: 0; transform: scale(0.82) rotate(-6deg); }
+    55% { opacity: 1; transform: scale(1) rotate(0); }
+    100% { opacity: 1; transform: scale(1) rotate(0); }
+  }
+  @keyframes cm-wipe {
+    0% { transform: scaleX(0); }
+    70% { transform: scaleX(1); }
+    100% { transform: scaleX(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cm-loader,
+    .cm-loader img,
+    .cm-loader i {
+      animation-duration: 0.01s;
+    }
+  }
+</style>
+
+<script>
+  const loader = document.getElementById("cm-loader");
+  if (loader) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const delay = reduceMotion ? 10 : 1500;
+    window.setTimeout(() => {
+      loader.remove();
+    }, delay);
+  }
+</script>

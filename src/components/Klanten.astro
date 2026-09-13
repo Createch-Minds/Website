@@ -1,0 +1,260 @@
+---
+const slides = [
+  {
+    logo: "/assets/tomtom.svg",
+    alt: "TomTom",
+    logoHeight: 34,
+    role: "In vast dienstverband",
+    title: "Een kaart die live meebeweegt",
+    body: "Meegewerkt aan Overture: wegdata van over de hele wereld, real time verwerkt met Kafka.",
+    tags: ["Java", "Kafka", "Real-time data"],
+  },
+  {
+    logo: "/assets/isabel.svg",
+    alt: "Isabel",
+    logoHeight: 38,
+    role: "Als freelancer",
+    title: "Isakey uitgerold",
+    body: "Bij een partij waar banken op rekenen: security-kritisch, tot in de randgevallen.",
+    tags: ["Security", "Spring Boot", "Uitrol"],
+  },
+  {
+    logo: "/assets/liantis.svg",
+    alt: "Liantis",
+    logoHeight: 36,
+    role: "Als freelancer",
+    title: "Facturatie die klopt",
+    body: "Facturatietools voor duizenden ondernemers. Geen ruimte voor fouten van één cent.",
+    tags: ["Domain Driven Design", "Databanken", "Automatisatie"],
+  },
+];
+---
+
+<section id="klanten" class="cm-klanten">
+  <div class="cm-klanten-head">
+    <h2 class="cm-section-kicker">Waar ik gewerkt heb</h2>
+    <div class="cm-klanten-arrows">
+      <button class="btn btn-secondary" type="button" data-carousel-prev aria-label="Vorige klant">&#8592;</button>
+      <button class="btn btn-secondary" type="button" data-carousel-next aria-label="Volgende klant">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="cm-carousel" data-carousel>
+    {
+      slides.map((slide, i) => (
+        <article class="cm-slide" data-carousel-slide data-index={i} aria-hidden={i === 0 ? "false" : "true"}>
+          <div class="cm-slide-meta">
+            <img
+              class="cm-logo"
+              src={slide.logo}
+              alt={slide.alt}
+              style={`height:${slide.logoHeight}px; width:auto;`}
+            />
+            <span class="cm-slide-role">{slide.role}</span>
+          </div>
+          <div class="cm-slide-content">
+            <h3>{slide.title}</h3>
+            <p>{slide.body}</p>
+            <div class="cm-slide-tags">
+              {slide.tags.map((tag) => (
+                <span class="tag tag-outline">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="cm-dots" data-carousel-dots>
+    {
+      slides.map((slide, i) => (
+        <button
+          class="cm-dot"
+          type="button"
+          data-carousel-dot
+          data-index={i}
+          aria-label={slide.alt}
+          aria-current={i === 0 ? "true" : "false"}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .cm-klanten {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding: 0 clamp(20px, 5vw, 56px) clamp(36px, 6vw, 64px);
+  }
+  .cm-klanten-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: clamp(18px, 3vw, 24px);
+  }
+  .cm-section-kicker {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .cm-klanten-arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cm-klanten-arrows .btn {
+    flex: none;
+  }
+
+  .cm-carousel {
+    position: relative;
+    border-top: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-text);
+  }
+  .cm-slide {
+    display: none;
+    grid-template-columns: minmax(150px, 230px) minmax(0, 1fr);
+    gap: clamp(20px, 4vw, 48px);
+    padding: clamp(24px, 3vw, 32px) 0;
+    align-items: start;
+    animation: cm-fade 0.4s ease both;
+  }
+  .cm-slide[data-active] {
+    display: grid;
+  }
+  @keyframes cm-fade {
+    from { opacity: 0; transform: translateX(12px); }
+    to { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cm-slide { animation-duration: 0.01s; }
+  }
+  .cm-slide-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .cm-logo {
+    align-self: flex-start;
+  }
+  .cm-slide-role {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-neutral-700);
+  }
+  .cm-slide-content h3 {
+    font-size: clamp(22px, 2.6vw, 30px);
+    margin: 0 0 12px;
+  }
+  .cm-slide-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 14px;
+    max-width: 62ch;
+    color: var(--color-neutral-800);
+  }
+  .cm-slide-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 700px) {
+    .cm-slide {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cm-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .cm-dot {
+    border: 0;
+    padding: 0;
+    width: 34px;
+    height: 6px;
+    cursor: pointer;
+    background: var(--color-neutral-300);
+    transition: background 0.3s;
+  }
+  .cm-dot[aria-current="true"] {
+    background: var(--color-accent);
+  }
+</style>
+
+<script>
+  const AUTO_MS = 6500;
+  const MANUAL_MS = 10000;
+
+  function initCarousel(root: HTMLElement) {
+    const slides = Array.from(root.querySelectorAll<HTMLElement>("[data-carousel-slide]"));
+    const dots = Array.from(
+      root.parentElement!.querySelectorAll<HTMLButtonElement>("[data-carousel-dot]")
+    );
+    const prevBtn = root.parentElement!.querySelector<HTMLButtonElement>("[data-carousel-prev]");
+    const nextBtn = root.parentElement!.querySelector<HTMLButtonElement>("[data-carousel-next]");
+    const count = slides.length;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let current = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    function render() {
+      slides.forEach((slide, i) => {
+        if (i === current) {
+          slide.setAttribute("data-active", "");
+          slide.setAttribute("aria-hidden", "false");
+        } else {
+          slide.removeAttribute("data-active");
+          slide.setAttribute("aria-hidden", "true");
+        }
+      });
+      dots.forEach((dot, i) => {
+        dot.setAttribute("aria-current", i === current ? "true" : "false");
+      });
+    }
+
+    function startTimer(intervalMs: number) {
+      if (reduceMotion) return;
+      if (timer) clearInterval(timer);
+      timer = setInterval(() => {
+        current = (current + 1) % count;
+        render();
+      }, intervalMs);
+    }
+
+    function goTo(index: number, manual: boolean) {
+      current = ((index % count) + count) % count;
+      render();
+      if (manual) startTimer(MANUAL_MS);
+    }
+
+    prevBtn?.addEventListener("click", () => goTo(current - 1, true));
+    nextBtn?.addEventListener("click", () => goTo(current + 1, true));
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const index = Number(dot.dataset.index ?? 0);
+        goTo(index, true);
+      });
+    });
+
+    root.addEventListener("mouseenter", () => timer && clearInterval(timer));
+    root.addEventListener("mouseleave", () => startTimer(AUTO_MS));
+    root.addEventListener("focusin", () => timer && clearInterval(timer));
+    root.addEventListener("focusout", () => startTimer(AUTO_MS));
+
+    render();
+    startTimer(AUTO_MS);
+  }
+
+  document.querySelectorAll<HTMLElement>("[data-carousel]").forEach(initCarousel);
+</script>

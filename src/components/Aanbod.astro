@@ -1,0 +1,105 @@
+---
+const rows = [
+  {
+    title: "Code, in Java",
+    body: "Java met Spring Boot. Getest, leesbaar, klaar voor productie.",
+  },
+  {
+    title: "Architectuur uittekenen",
+    body: "Domain Driven Design en microservices — enkel waar het iets oplost.",
+  },
+  {
+    title: "Event driven architecture",
+    body: "Systemen die communiceren zonder op elkaar te wachten. Kafka of RabbitMQ.",
+  },
+  {
+    title: "Azure en uw cloudrekening",
+    body: "Deployen, monitoren, opschonen. Meestal goedkoper dan gedacht.",
+  },
+  {
+    title: "Trage databanken",
+    body: "Queries en indexen die van vijf minuten wachten seconden maken.",
+  },
+  {
+    title: "Werken mét AI-tools",
+    body: "Sneller werk dankzij AI. Security en kwaliteit blijven mijn verantwoordelijkheid, niet die van een model.",
+  },
+  {
+    title: "Werk dat niemand graag doet",
+    body: "Handmatige stappen die elke maand terugkomen — facturatie, koppelingen, rapportjes — één keer goed automatiseren.",
+  },
+];
+---
+
+<section id="aanbod" class="cm-aanbod">
+  <h2 class="cm-section-kicker">Waarmee ik bijspring</h2>
+  <div class="cm-rows">
+    {
+      rows.map((row, i) => (
+        <div class="cm-row">
+          <span class="cm-row-num">{String(i + 1).padStart(2, "0")}</span>
+          <h3 class="cm-row-title">{row.title}</h3>
+          <p class="cm-row-body">{row.body}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .cm-aanbod {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding: clamp(36px, 6vw, 64px) clamp(20px, 5vw, 56px);
+  }
+  .cm-section-kicker {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 clamp(20px, 3vw, 28px);
+  }
+  .cm-rows {
+    display: flex;
+    flex-direction: column;
+  }
+  .cm-row {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: clamp(16px, 3vw, 32px);
+    padding: 22px 0;
+    border-top: 2px solid var(--color-divider);
+  }
+  .cm-row:first-child {
+    border-top: 2px solid var(--color-text);
+  }
+  .cm-row:last-child {
+    border-bottom: 2px solid var(--color-text);
+  }
+  .cm-row-num {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--color-accent);
+  }
+  .cm-row-title {
+    font-size: clamp(19px, 2vw, 23px);
+    margin: 0;
+  }
+  .cm-row-body {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--color-neutral-800);
+  }
+
+  @media (max-width: 700px) {
+    .cm-row {
+      grid-template-columns: 64px minmax(0, 1fr);
+    }
+    .cm-row-title,
+    .cm-row-body {
+      grid-column: 2;
+    }
+  }
+</style>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-c6742455-49ef-45d2-a714-3d47b8b555e5/styles.css">
+<script src="_ds/modernist-c6742455-49ef-45d2-a714-3d47b8b555e5/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap">
+<style>
+  body { margin: 0; background: #fff; }
+  a { color: var(--color-accent); text-decoration: none; }
+  a:hover { color: var(--color-accent-700); text-decoration: underline; }
+  @keyframes cm-veil { 0%,55% { opacity: 1; } 100% { opacity: 0; } }
+  @keyframes cm-mark { 0% { opacity: 0; transform: scale(.82) rotate(-6deg); } 55% { opacity: 1; transform: scale(1) rotate(0); } 100% { opacity: 1; transform: scale(1) rotate(0); } }
+  @keyframes cm-wipe { 0% { transform: scaleX(0); } 70% { transform: scaleX(1); } 100% { transform: scaleX(1); } }
+  @keyframes cm-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  .cm-veil { animation: cm-veil 1.4s ease both; }
+  .cm-veil img { animation: cm-mark .9s cubic-bezier(.2,.8,.2,1) both; }
+  .cm-veil i { animation: cm-wipe 1.2s cubic-bezier(.65,0,.35,1) both; transform-origin: left center; }
+  .cm-mark:hover { transform: rotate(-4deg) scale(1.04); }
+  .cm-dot { border: 0; padding: 0; width: 34px; height: 6px; cursor: pointer; transition: background .3s; }
+  @media (prefers-reduced-motion: reduce) {
+    .cm-veil, .cm-veil img, .cm-veil i { animation-duration: .01s; }
+  }
+</style>
+</helmet>
+
+<div style="position:relative; background:#fff; color:var(--color-text); font-family:var(--font-body); overflow-x:hidden">
+
+  <sc-if value="{{ loading }}" hint-placeholder-val="{{ true }}">
+    <div class="cm-veil" style="position:fixed; inset:0; z-index:50; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; pointer-events:none">
+      <img src="assets/logo.svg" alt="" style="width:130px; height:auto">
+      <i style="display:block; width:170px; height:3px; background:var(--color-accent)"></i>
+    </div>
+  </sc-if>
+
+  <header style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px clamp(20px,5vw,56px); flex-wrap:wrap">
+    <a href="#top" style="display:flex; align-items:center; gap:14px; color:var(--color-text)">
+      <img class="cm-mark" src="assets/logo.svg" alt="Createch Minds" style="width:60px; height:auto; transition:transform .35s cubic-bezier(.2,.8,.2,1)">
+      <span style="font-family:var(--font-heading); font-weight:800; font-size:15px; letter-spacing:0.02em">CREATECH MINDS</span>
+    </a>
+    <nav style="display:flex; align-items:center; gap:clamp(16px,2.5vw,32px); flex-wrap:wrap; font-family:var(--font-heading); font-weight:600; font-size:13px; letter-spacing:0.05em; text-transform:uppercase">
+      <a href="#aanbod" style="color:var(--color-text)">Aanbod</a>
+      <a href="#klanten" style="color:var(--color-text)">Klanten</a>
+      <a href="#contact" style="color:var(--color-text)">Contact</a>
+    </nav>
+  </header>
+
+  <section id="top" style="padding:0 clamp(20px,5vw,56px) clamp(32px,5vw,56px)">
+    <hr class="hr" style="margin:0 0 clamp(24px,4vw,40px); background:var(--color-text)">
+    <div style="display:grid; grid-template-columns:minmax(0,1.45fr) minmax(200px,0.55fr); gap:clamp(28px,4vw,56px); align-items:end">
+      <div>
+        <h1 style="font-size:clamp(38px,7vw,78px); line-height:0.96; letter-spacing:-0.03em; margin:0 0 clamp(20px,3vw,32px); text-wrap:balance">Java-ingenieur uit Diksmuide, te huur per dag.</h1>
+        <p style="font-size:clamp(17px,1.6vw,20px); line-height:1.5; max-width:52ch; margin:0 0 24px">Ik ben Thomas. Ik heb een paar jaar bij TomTom gezeten, daarna sprong ik voor eigen rekening. Sindsdien bouw ik mee aan software bij Isabel en Liantis — en ik zou dat graag ook eens dichter bij huis doen.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center">
+          <a class="btn btn-primary" href="#contact" style="justify-content:flex-start; flex:none">Stuur me een bericht</a>
+          <span style="font-size:14px; color:var(--color-neutral-700)">Of gewoon bellen — ik kom ook ter plaatse.</span>
+        </div>
+      </div>
+      <figure style="margin:0">
+        <div class="grayscale" style="border:2px solid var(--color-text)">
+          <img src="assets/thomas.jpg" alt="Thomas Vankerckhoven" style="width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 22%">
+        </div>
+        <figcaption style="font-size:12px; margin-top:8px; color:var(--color-neutral-700)">Thomas Vankerckhoven — freelance software-ingenieur</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div style="background:var(--color-text); color:#fff; padding:16px clamp(20px,5vw,56px); display:flex; flex-wrap:wrap; gap:10px 28px; font-family:var(--font-heading); font-weight:600; font-size:13px; letter-spacing:0.07em; text-transform:uppercase">
+    <span>Java</span><span>Spring Boot</span><span>Event driven architecture</span><span>Azure</span><span>Databanken</span><span>Security</span><span>Microservices</span>
+  </div>
+
+  <section id="aanbod" style="padding:clamp(36px,6vw,64px) clamp(20px,5vw,56px)">
+    <h2 style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase; margin:0 0 clamp(20px,3vw,28px)">Waarmee ik bijspring</h2>
+    <div style="display:flex; flex-direction:column">
+      <div style="display:grid; grid-template-columns:64px minmax(0,1fr) minmax(0,1.15fr); gap:clamp(16px,3vw,32px); padding:22px 0; border-top:2px solid var(--color-text)">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:30px; line-height:1; color:var(--color-accent)">01</span>
+        <h3 style="font-size:clamp(19px,2vw,23px); margin:0">Code, in Java</h3>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Ik schuif aan bij uw team en schrijf mee: Java met Spring Boot, getest, met een pull request die iemand anders ook kan lezen.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:64px minmax(0,1fr) minmax(0,1.15fr); gap:clamp(16px,3vw,32px); padding:22px 0; border-top:2px solid var(--color-divider)">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:30px; line-height:1; color:var(--color-accent)">02</span>
+        <h3 style="font-size:clamp(19px,2vw,23px); margin:0">Architectuur uittekenen</h3>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Domain Driven Design en microservices — maar alleen waar ze iets oplossen. Soms is één degelijke applicatie het juiste antwoord.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:64px minmax(0,1fr) minmax(0,1.15fr); gap:clamp(16px,3vw,32px); padding:22px 0; border-top:2px solid var(--color-divider)">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:30px; line-height:1; color:var(--color-accent)">03</span>
+        <h3 style="font-size:clamp(19px,2vw,23px); margin:0">Event driven architecture</h3>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Systemen die met elkaar praten zonder op elkaar te wachten. Met Kafka of RabbitMQ, afhankelijk van wat u al in huis hebt.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:64px minmax(0,1fr) minmax(0,1.15fr); gap:clamp(16px,3vw,32px); padding:22px 0; border-top:2px solid var(--color-divider)">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:30px; line-height:1; color:var(--color-accent)">04</span>
+        <h3 style="font-size:clamp(19px,2vw,23px); margin:0">Azure en uw cloudrekening</h3>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Deployen, monitoren en opruimen. Meestal valt er nog een stuk van die maandelijkse factuur af zonder dat iemand het merkt.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:64px minmax(0,1fr) minmax(0,1.15fr); gap:clamp(16px,3vw,32px); padding:22px 0; border-top:2px solid var(--color-divider)">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:30px; line-height:1; color:var(--color-accent)">05</span>
+        <h3 style="font-size:clamp(19px,2vw,23px); margin:0">Databanken die traag zijn geworden</h3>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Queries, indexen, datamodel. Als een rapport vijf minuten duurt, is dat zelden nodig.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:64px minmax(0,1fr) minmax(0,1.15fr); gap:clamp(16px,3vw,32px); padding:22px 0; border-top:2px solid var(--color-divider)">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:30px; line-height:1; color:var(--color-accent)">06</span>
+        <h3 style="font-size:clamp(19px,2vw,23px); margin:0">Werken mét AI-tools</h3>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Ik gebruik ze elke dag; ze schelen tijd, en dus geld. Maar er moet iemand boven staan: security en onderhoudbare code blijven mijn verantwoordelijkheid, niet die van een model.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:64px minmax(0,1fr) minmax(0,1.15fr); gap:clamp(16px,3vw,32px); padding:22px 0; border-top:2px solid var(--color-divider); border-bottom:2px solid var(--color-text)">
+        <span style="font-family:var(--font-heading); font-weight:800; font-size:30px; line-height:1; color:var(--color-accent)">07</span>
+        <h3 style="font-size:clamp(19px,2vw,23px); margin:0">Het werk dat niemand graag doet</h3>
+        <p style="font-size:15px; line-height:1.6; margin:0; color:var(--color-neutral-800)">Handmatige stappen die elke maand terugkomen — facturatie, koppelingen, rapportjes — één keer goed automatiseren.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="klanten" style="padding:0 clamp(20px,5vw,56px) clamp(36px,6vw,64px)">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:clamp(18px,3vw,24px)">
+      <h2 style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase; margin:0">Waar ik gewerkt heb</h2>
+      <div style="display:flex; align-items:center; gap:10px">
+        <button class="btn btn-secondary" type="button" onClick="{{ prev }}" aria-label="Vorige klant" style="flex:none">&#8592;</button>
+        <button class="btn btn-secondary" type="button" onClick="{{ next }}" aria-label="Volgende klant" style="flex:none">&#8594;</button>
+      </div>
+    </div>
+
+    <div style="border-top:2px solid var(--color-text); border-bottom:2px solid var(--color-text)">
+      <sc-if value="{{ on0 }}" hint-placeholder-val="{{ true }}">
+        <article class="cm-slide" style="display:grid; grid-template-columns:minmax(150px,230px) minmax(0,1fr); gap:clamp(20px,4vw,48px); padding:clamp(24px,3vw,32px) 0; align-items:start">
+          <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start">
+            <img class="cm-logo grayscale" src="assets/tomtom.svg" alt="TomTom" style="height:26px; width:auto; align-self:flex-start">
+            <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700)">In vast dienstverband</span>
+          </div>
+          <div>
+            <h3 style="font-size:clamp(22px,2.6vw,30px); margin:0 0 12px">Een kaart die live meebeweegt</h3>
+            <p style="font-size:16px; line-height:1.6; margin:0 0 14px; max-width:62ch; color:var(--color-neutral-800)">Ik werkte mee aan Overture, waar wegdata van overal ter wereld samenkomt. Onze opdracht: die wijzigingen in real time op de kaart krijgen. Kafka deed het zware werk, wij hielden het consistent.</p>
+            <div style="display:flex; gap:6px; flex-wrap:wrap">
+              <span class="tag tag-outline">Java</span>
+              <span class="tag tag-outline">Kafka</span>
+              <span class="tag tag-outline">Real-time data</span>
+            </div>
+          </div>
+        </article>
+      </sc-if>
+      <sc-if value="{{ on1 }}" hint-placeholder-val="{{ false }}">
+        <article class="cm-slide" style="display:grid; grid-template-columns:minmax(150px,230px) minmax(0,1fr); gap:clamp(20px,4vw,48px); padding:clamp(24px,3vw,32px) 0; align-items:start">
+          <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start">
+            <img class="cm-logo grayscale" src="assets/isabel.svg" alt="Isabel" style="height:30px; width:auto; align-self:flex-start">
+            <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700)">Als freelancer</span>
+          </div>
+          <div>
+            <h3 style="font-size:clamp(22px,2.6vw,30px); margin:0 0 12px">Isakey uitgerold</h3>
+            <p style="font-size:16px; line-height:1.6; margin:0 0 14px; max-width:62ch; color:var(--color-neutral-800)">Bij een partij waar banken op rekenen, mag inloggen niet mislukken. Ik hielp Isakey uitrollen: veel aandacht voor security, voor de randgevallen, en voor de mensen aan de andere kant van de lijn.</p>
+            <div style="display:flex; gap:6px; flex-wrap:wrap">
+              <span class="tag tag-outline">Security</span>
+              <span class="tag tag-outline">Spring Boot</span>
+              <span class="tag tag-outline">Uitrol</span>
+            </div>
+          </div>
+        </article>
+      </sc-if>
+      <sc-if value="{{ on2 }}" hint-placeholder-val="{{ false }}">
+        <article class="cm-slide" style="display:grid; grid-template-columns:minmax(150px,230px) minmax(0,1fr); gap:clamp(20px,4vw,48px); padding:clamp(24px,3vw,32px) 0; align-items:start">
+          <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start">
+            <img class="cm-logo grayscale" src="assets/liantis.png" alt="Liantis" style="height:40px; width:40px; object-fit:contain; align-self:flex-start">
+            <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-neutral-700)">Als freelancer</span>
+          </div>
+          <div>
+            <h3 style="font-size:clamp(22px,2.6vw,30px); margin:0 0 12px">Facturatie die klopt</h3>
+            <p style="font-size:16px; line-height:1.6; margin:0 0 14px; max-width:62ch; color:var(--color-neutral-800)">Facturatietools voor duizenden ondernemers. Een fout van één cent is hier een fout — dus duidelijke domeinlogica, tests die iets betekenen, en code die over twee jaar nog te volgen is.</p>
+            <div style="display:flex; gap:6px; flex-wrap:wrap">
+              <span class="tag tag-outline">Domain Driven Design</span>
+              <span class="tag tag-outline">Databanken</span>
+              <span class="tag tag-outline">Automatisatie</span>
+            </div>
+          </div>
+        </article>
+      </sc-if>
+    </div>
+
+    <div style="display:flex; gap:8px; margin-top:16px">
+      <sc-if value="{{ on0 }}" hint-placeholder-val="{{ true }}">
+        <button class="cm-dot" type="button" onClick="{{ goto0 }}" aria-label="TomTom" style="background:var(--color-accent)"></button>
+      </sc-if>
+      <sc-if value="{{ off0 }}" hint-placeholder-val="{{ false }}">
+        <button class="cm-dot" type="button" onClick="{{ goto0 }}" aria-label="TomTom" style="background:var(--color-neutral-300)"></button>
+      </sc-if>
+      <sc-if value="{{ on1 }}" hint-placeholder-val="{{ false }}">
+        <button class="cm-dot" type="button" onClick="{{ goto1 }}" aria-label="Isabel" style="background:var(--color-accent)"></button>
+      </sc-if>
+      <sc-if value="{{ off1 }}" hint-placeholder-val="{{ true }}">
+        <button class="cm-dot" type="button" onClick="{{ goto1 }}" aria-label="Isabel" style="background:var(--color-neutral-300)"></button>
+      </sc-if>
+      <sc-if value="{{ on2 }}" hint-placeholder-val="{{ false }}">
+        <button class="cm-dot" type="button" onClick="{{ goto2 }}" aria-label="Liantis" style="background:var(--color-accent)"></button>
+      </sc-if>
+      <sc-if value="{{ off2 }}" hint-placeholder-val="{{ true }}">
+        <button class="cm-dot" type="button" onClick="{{ goto2 }}" aria-label="Liantis" style="background:var(--color-neutral-300)"></button>
+      </sc-if>
+    </div>
+  </section>
+
+  <section id="contact" style="border-top:2px solid var(--color-text); padding:clamp(36px,6vw,64px) clamp(20px,5vw,56px); display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:clamp(28px,5vw,56px)">
+    <div>
+      <h2 style="font-size:clamp(30px,4vw,44px); line-height:1.04; margin:0 0 16px">Waar loopt het bij u vast?</h2>
+      <p style="font-size:16px; line-height:1.6; color:var(--color-neutral-800); margin:0 0 20px; max-width:48ch">Zoekt u iemand die uw flow wat meer op punt zet — Azure, databanken, een koppeling die nooit af komt? Schrijf in een paar lijnen wat er scheelt. Ik antwoord zelf, meestal binnen twee werkdagen.</p>
+      <div style="display:flex; flex-direction:column; gap:6px; border-top:2px solid var(--color-text); padding-top:14px; font-size:15px">
+        <a href="mailto:thomas.vankerckhoven@createch-minds.be">thomas.vankerckhoven@createch-minds.be</a>
+        <span style="color:var(--color-neutral-700)">Roeselarestraat 67A, 8600 Diksmuide</span>
+      </div>
+    </div>
+    <div>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="background:var(--color-text); color:#fff; padding:28px; display:flex; flex-direction:column; gap:8px">
+          <div style="font-family:var(--font-heading); font-weight:800; font-size:20px">Bedankt, uw bericht is onderweg.</div>
+          <div style="font-size:15px">Ik laat binnen twee werkdagen van me horen.</div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:18px">
+          <div class="field">
+            <label for="v2-naam">Naam</label>
+            <input class="input" id="v2-naam" name="naam" required="required" placeholder="Voornaam en naam">
+          </div>
+          <div class="field">
+            <label for="v2-bedrijf">Bedrijf</label>
+            <input class="input" id="v2-bedrijf" name="bedrijf" placeholder="Uw bedrijf">
+          </div>
+          <div class="field" style="grid-column:1 / -1">
+            <label for="v2-mail">E-mail</label>
+            <input class="input" id="v2-mail" name="email" type="email" required="required" placeholder="naam@bedrijf.be">
+          </div>
+          <div class="field" style="grid-column:1 / -1">
+            <label for="v2-vraag">Wat scheelt er?</label>
+            <textarea class="input" id="v2-vraag" name="vraag" rows="4" style="resize:vertical" placeholder="Kort volstaat: project, technologie, wanneer."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" style="grid-column:1 / -1; justify-content:flex-start; white-space:nowrap">Verstuur</button>
+        </form>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="border-top:2px solid var(--color-text); padding:22px clamp(20px,5vw,56px); display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 32px; font-size:12px; color:var(--color-neutral-700)">
+    <span>Createch Minds CommV · BTW BE1002.531.325</span>
+    <span>Roeselarestraat 67A, 8600 Diksmuide</span>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#ec3013&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#ec3013&quot;,&quot;#058CD4&quot;,&quot;#892D7E&quot;,&quot;#201e1d&quot;],&quot;section&quot;:&quot;Stijl&quot;},&quot;photoGrayscale&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Stijl&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false, slide: 0, loading: true };
+
+  componentDidMount() {
+    this.applyTheme();
+    this.veil = setTimeout(() => this.setState({ loading: false }), 1500);
+    this.timer = setInterval(() => this.setState(st => ({ slide: (st.slide + 1) % 3 })), 6500);
+  }
+  componentDidUpdate() { this.applyTheme(); }
+  componentWillUnmount() {
+    clearTimeout(this.veil);
+    clearInterval(this.timer);
+  }
+
+  applyTheme() {
+    if (this.props.accent) document.documentElement.style.setProperty('--color-accent', this.props.accent);
+    const gray = this.props.photoGrayscale ?? true;
+    document.querySelectorAll('.grayscale, .cm-logo').forEach(el => {
+      el.style.filter = gray ? 'grayscale(1) contrast(1.08)' : 'none';
+    });
+  }
+
+  go(i, manual) {
+    if (manual) {
+      clearInterval(this.timer);
+      this.timer = setInterval(() => this.setState(st => ({ slide: (st.slide + 1) % 3 })), 10000);
+    }
+    this.setState({ slide: ((i % 3) + 3) % 3 });
+  }
+
+  submit(e) {
+    e.preventDefault();
+    const f = e.target;
+    const get = n => (f.elements[n] ? f.elements[n].value : '');
+    const body = ['Naam: ' + get('naam'), 'Bedrijf: ' + get('bedrijf'), 'E-mail: ' + get('email'), '', get('vraag')].join('\n');
+    window.open('mailto:thomas.vankerckhoven@createch-minds.be?subject='
+      + encodeURIComponent('Aanvraag via createch-minds.be') + '&body=' + encodeURIComponent(body), '_blank');
+    this.setState({ sent: true });
+  }
+
+  renderVals() {
+    const s = this.state.slide;
+    return {
+      loading: this.state.loading,
+      sent: this.state.sent,
+      showForm: !this.state.sent,
+      submit: e => this.submit(e),
+      on0: s === 0, on1: s === 1, on2: s === 2,
+      off0: s !== 0, off1: s !== 1, off2: s !== 2,
+      prev: () => this.go(s - 1, true),
+      next: () => this.go(s + 1, true),
+      goto0: () => this.go(0, true),
+      goto1: () => this.go(1, true),
+      goto2: () => this.go(2, true)
+    };
+  }
+}
+
+</script>
+</body>
+</html>

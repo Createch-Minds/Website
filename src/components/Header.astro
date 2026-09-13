@@ -1,0 +1,65 @@
+---
+---
+
+<header class="cm-header">
+  <a href="/#top" class="cm-brand">
+    <img class="cm-mark" src="/assets/icon.svg" alt="Createch Minds" width="64" height="64" />
+    <span class="cm-wordmark">CREATECH MINDS</span>
+  </a>
+  <nav class="cm-nav">
+    <a href="/#aanbod">Aanbod</a>
+    <a href="/#klanten">Klanten</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</header>
+
+<style>
+  .cm-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding: 20px clamp(20px, 5vw, 56px);
+    flex-wrap: wrap;
+  }
+  .cm-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--color-text);
+  }
+  .cm-brand:hover { text-decoration: none; }
+  .cm-mark {
+    width: 88px;
+    height: auto;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .cm-brand:hover .cm-mark {
+    transform: rotate(-4deg) scale(1.04);
+  }
+  .cm-wordmark {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+  }
+  .cm-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2.5vw, 32px);
+    flex-wrap: wrap;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .cm-nav a {
+    color: var(--color-text);
+  }
+  .cm-nav a:hover {
+    text-decoration: underline;
+  }
+</style>

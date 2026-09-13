@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Pagina niet gevonden — Createch Minds" description="Deze pagina bestaat niet (meer).">
+  <Header />
+  <section class="cm-404">
+    <hr class="hr" />
+    <h1>Pagina niet gevonden.</h1>
+    <p>Deze link klopt niet (meer), of de pagina is verplaatst.</p>
+    <a class="btn btn-primary" href="/">Terug naar de homepage</a>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  .cm-404 {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding: clamp(48px, 10vw, 120px) clamp(20px, 5vw, 56px);
+  }
+  .cm-404 h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.04;
+    margin: clamp(24px, 4vw, 40px) 0 16px;
+  }
+  .cm-404 p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-neutral-800);
+    margin: 0 0 28px;
+    max-width: 48ch;
+  }
+</style>

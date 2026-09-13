@@ -1,0 +1,18 @@
+BTW: BE1002.531.325
+Naam: Createch Minds
+Adres: Roeselarestraat 67A, Diksmuide 8600
+
+thomas.vankerckhoven@createch-minds.be
+
+Thomas Vankerckhoven
+
+Freelance Software Ingenieur
+Expertise in Java
+
+Tekstje: Na enkele Jaren te werken voor TomTom nam ik de sprong zelfstandig te worden. Na te werken voor klanten zoals Isabel en Liantis ben ik er van overtuigd ook voor uw bedrijf mijn expertise te kunnen aanbieden. Hierbij kan ik bijspringen voor het schrijven van code en maken van architecturale beslissingen. Zo pas ik Domain Driven Design toe, werk ik constant met microservices, hou ik me bezig met het optimaliseren en automatiseren van processen. 
+
+Heeft jouw bedrijf nood aan een IT specialist om Julie flow wat meer op punt te stellen (Azure, databanken, ...). Verder vermelden dat ik ook gebruik maak van Ai tools, aangezien die in een wereld van nu onmisbaar zijn. Maar toch aanhalen dat AI niet zomaar ingezet kan worden en er altijd een supervisor nodig is, zo moet security en well maintained code nog steeds central staan. 
+
+TomTom: meewerken aan Overture, maken van real time map adhv kafka
+Isabel: uitrol Isakey
+Liantis: Facturatie tools
