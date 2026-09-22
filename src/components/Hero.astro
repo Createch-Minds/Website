@@ -3,15 +3,26 @@
 
 <section id="top" class="cm-hero">
   <hr class="hr cm-hero-rule" />
-  <div class="cm-hero-content">
-    <h1>Java-ingenieur uit de Westhoek, te huur per dag.</h1>
-    <p class="cm-hero-lead">
-      Ex-TomTom, nu freelancer bij Isabel en Liantis. Ik los technische knopen op —
-      code, architectuur, cloud — en lever werk dat blijft draaien.
-    </p>
-    <div class="cm-hero-cta">
-      <a class="btn btn-primary" href="/#contact">Stuur me een bericht</a>
-      <span class="cm-hero-note">Of gewoon bellen — ik kom ook ter plaatse.</span>
+  <div class="cm-hero-grid">
+    <div class="cm-hero-content">
+      <h1>Java-ingenieur uit de Westhoek, te huur per dag.</h1>
+      <p class="cm-hero-lead">
+        Ex-TomTom, nu freelancer bij Isabel en Liantis. Ik los technische knopen op —
+        code, architectuur, cloud — en lever werk dat blijft draaien.
+      </p>
+      <div class="cm-hero-cta">
+        <a class="btn btn-primary" href="/#contact">Stuur me een bericht</a>
+        <span class="cm-hero-note">Of gewoon bellen — ik kom ook ter plaatse.</span>
+      </div>
+    </div>
+    <div class="cm-hero-photo-wrap">
+      <img
+        class="cm-hero-photo"
+        src="/assets/thomas2.jpg"
+        alt="Thomas Vankerckhoven"
+        width="480"
+        height="600"
+      />
     </div>
   </div>
 </section>
@@ -24,6 +35,12 @@
   }
   .cm-hero-rule {
     margin: 0 0 clamp(24px, 4vw, 40px);
+  }
+  .cm-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr clamp(180px, 22vw, 300px);
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
   }
   h1 {
     font-size: clamp(38px, 7vw, 78px);
@@ -48,5 +65,22 @@
   .cm-hero-note {
     font-size: 14px;
     color: var(--color-neutral-700);
+  }
+  .cm-hero-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 50% 15%;
+    border: 2px solid var(--color-text);
+    filter: grayscale(100%);
+  }
+  @media (max-width: 700px) {
+    .cm-hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .cm-hero-photo-wrap {
+      display: none;
+    }
   }
 </style>
